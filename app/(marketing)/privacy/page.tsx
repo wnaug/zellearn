@@ -39,7 +39,7 @@ function Section({
         <span className="font-heading font-bold text-[13px] text-zel-teal tabular-nums">
           {number}.
         </span>
-        <h2 className="font-heading font-bold text-zel-ink text-[18px]">{title}</h2>
+        <h2 className="font-heading font-bold    text-[18px]">{title}</h2>
       </div>
       <div className="pl-7 text-[14.5px] text-muted-foreground leading-[1.85] space-y-3">
         {children}
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
           </motion.p>
           <motion.h1
             variants={fadeUp}
-            className="font-heading font-bold text-zel-ink leading-tight mb-3"
+            className="font-heading font-bold    leading-tight mb-3"
             style={{ fontSize: "clamp(2rem, 5vw, 3.2rem)" }}
           >
             Privacy Policy
@@ -303,7 +303,7 @@ export default function PrivacyPage() {
           <p className="text-[10.5px] font-bold tracking-[0.14em] uppercase text-muted-foreground mb-3">
             Questions about your data?
           </p>
-          <h3 className="font-heading font-bold text-zel-ink text-[18px] mb-2">
+          <h3 className="font-heading font-bold    text-[18px] mb-2">
             We&apos;re easy to reach
           </h3>
           <p className="text-[14px] text-muted-foreground leading-relaxed mb-5">

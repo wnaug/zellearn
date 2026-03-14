@@ -404,7 +404,7 @@ export default function Page() {
           <Icon className="w-5 h-5 text-zel-teal" strokeWidth={2} />
         </motion.div>
 
-        <h3 className="font-heading font-bold text-[19px] text-zel-ink mb-2 group-hover:text-zel-teal transition-colors duration-200">
+        <h3 className="font-heading font-bold text-[19px]    mb-2 group-hover:text-zel-teal transition-colors duration-200">
           {f.title}
         </h3>
         <p className="text-[13.5px] leading-relaxed text-muted-foreground">
@@ -445,7 +445,7 @@ export default function Page() {
         Simple by design
       </motion.p>
       <motion.h2
-        className="font-heading font-bold text-zel-ink mb-4"
+        className="font-heading font-bold    mb-4"
         style={{ fontSize: "clamp(1.9rem, 4vw, 3.2rem)" }}
       >
         Three steps to{" "}
@@ -460,7 +460,7 @@ export default function Page() {
             <div className="w-10 h-10 rounded-xl bg-zel-teal-light flex items-center justify-center font-heading font-bold text-[13px] mb-6 text-zel-teal-dark font-serif">
               {s.step}
             </div>
-            <h3 className="font-heading font-bold text-zel-ink text-[18px] mb-2">{s.title}</h3>
+            <h3 className="font-heading font-bold    text-[18px] mb-2">{s.title}</h3>
             <p className="text-[13px] text-muted-foreground leading-relaxed">{s.desc}</p>
           </div>
         </div>
