@@ -4,125 +4,337 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ═══════════════════════════════════════════════════════════
+   ZEL LEARN — Design Tokens
+   Primary:    #2F8F83  →  oklch(0.558 0.095 185.5)   deep teal
+   Background: #F4F8F7  →  oklch(0.977 0.008 185.5)   teal-tinted white
+   Accent:     #E8A838  →  oklch(0.74  0.148 72.5)    warm amber
+   Coral:      #E8604A  →  oklch(0.62  0.18  28)       coral / destructive
+   ═══════════════════════════════════════════════════════════ */
+
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.147 0.004 49.3);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.147 0.004 49.3);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.147 0.004 49.3);
-    --primary: oklch(0.532 0.157 131.589);
-    --primary-foreground: oklch(0.986 0.031 120.757);
-    --secondary: oklch(0.967 0.001 286.375);
-    --secondary-foreground: oklch(0.21 0.006 285.885);
-    --muted: oklch(0.96 0.002 17.2);
-    --muted-foreground: oklch(0.547 0.021 43.1);
-    --accent: oklch(0.96 0.002 17.2);
-    --accent-foreground: oklch(0.214 0.009 43.1);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0.005 34.3);
-    --input: oklch(0.922 0.005 34.3);
-    --ring: oklch(0.714 0.014 41.2);
-    --chart-1: oklch(0.897 0.196 126.665);
-    --chart-2: oklch(0.768 0.233 130.85);
-    --chart-3: oklch(0.648 0.2 131.684);
-    --chart-4: oklch(0.532 0.157 131.589);
-    --chart-5: oklch(0.453 0.124 130.933);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.986 0.002 67.8);
-    --sidebar-foreground: oklch(0.147 0.004 49.3);
-    --sidebar-primary: oklch(0.648 0.2 131.684);
-    --sidebar-primary-foreground: oklch(0.986 0.031 120.757);
-    --sidebar-accent: oklch(0.96 0.002 17.2);
-    --sidebar-accent-foreground: oklch(0.214 0.009 43.1);
-    --sidebar-border: oklch(0.922 0.005 34.3);
-    --sidebar-ring: oklch(0.714 0.014 41.2);
+    /* ── Surfaces ─────────────────────────────────────── */
+    --background:               oklch(0.977 0.008 185.5);  /* #F4F8F7 teal-white */
+    --foreground:               oklch(0.28  0.05  185.5);  /* #1A3D3A dark teal ink */
+
+    --card:                     oklch(0.995 0.004 185.5);  /* warm white, teal hint */
+    --card-foreground:          oklch(0.28  0.05  185.5);
+
+    --popover:                  oklch(0.995 0.004 185.5);
+    --popover-foreground:       oklch(0.28  0.05  185.5);
+
+    /* ── Brand ────────────────────────────────────────── */
+    --primary:                  oklch(0.558 0.095 185.5);  /* #2F8F83 deep teal */
+    --primary-foreground:       oklch(0.977 0.008 185.5);  /* teal-white on teal */
+
+    --secondary:                oklch(0.92  0.04  185.5);  /* light teal tint */
+    --secondary-foreground:     oklch(0.38  0.09  185.5);  /* mid teal text */
+
+    --muted:                    oklch(0.94  0.018 185.5);  /* very soft teal surface */
+    --muted-foreground:         oklch(0.58  0.038 185.5);  /* muted teal-grey text */
+
+    --accent:                   oklch(0.95  0.07  85);     /* amber light — #FFF0C2 feel */
+    --accent-foreground:        oklch(0.6   0.14  68);     /* amber dark */
+
+    /* ── States ───────────────────────────────────────── */
+    --destructive:              oklch(0.62  0.18  28);     /* #E8604A coral */
+    --destructive-foreground:   oklch(0.977 0.008 185.5);
+
+    /* ── Structure ────────────────────────────────────── */
+    --border:                   oklch(0.9   0.018 185.5);  /* teal-tinted border */
+    --input:                    oklch(0.9   0.018 185.5);
+    --ring:                     oklch(0.558 0.095 185.5);  /* teal focus ring */
+
+    /* ── Charts ───────────────────────────────────────── */
+    --chart-1:                  oklch(0.74  0.148 72.5);   /* amber */
+    --chart-2:                  oklch(0.558 0.095 185.5);  /* teal */
+    --chart-3:                  oklch(0.72  0.07  185.5);  /* teal mid */
+    --chart-4:                  oklch(0.62  0.18  28);     /* coral */
+    --chart-5:                  oklch(0.68  0.12  150);    /* sage */
+
+    /* ── Radius ───────────────────────────────────────── */
+    --radius: 0.425rem;  /* 14px — warm rounded, not sharp */
+
+    /* ── Sidebar ──────────────────────────────────────── */
+    --sidebar:                  oklch(0.965 0.012 185.5);
+    --sidebar-foreground:       oklch(0.28  0.05  185.5);
+    --sidebar-primary:          oklch(0.558 0.095 185.5);
+    --sidebar-primary-foreground: oklch(0.977 0.008 185.5);
+    --sidebar-accent:           oklch(0.92  0.04  185.5);
+    --sidebar-accent-foreground: oklch(0.38  0.09  185.5);
+    --sidebar-border:           oklch(0.9   0.018 185.5);
+    --sidebar-ring:             oklch(0.558 0.095 185.5);
+
+    /* ── Zel brand extras (use in components directly) ── */
+    --zel-teal:                 oklch(0.558 0.095 185.5);  /* #2F8F83 */
+    --zel-teal-light:           oklch(0.92  0.04  185.5);
+    --zel-teal-dark:            oklch(0.38  0.09  185.5);
+    --zel-teal-mid:             oklch(0.72  0.07  185.5);
+    --zel-amber:                oklch(0.74  0.148 72.5);   /* #E8A838 */
+    --zel-amber-light:          oklch(0.95  0.07  85);
+    --zel-amber-dark:           oklch(0.6   0.14  68);
+    --zel-coral:                oklch(0.62  0.18  28);     /* #E8604A */
+    --zel-coral-light:          oklch(0.95  0.05  25);
+    --zel-sage:                 oklch(0.68  0.12  150);
+    --zel-sage-light:           oklch(0.94  0.045 150);
+    --zel-lavender:             oklch(0.65  0.12  295);
+    --zel-lavender-light:       oklch(0.94  0.04  295);
+    --zel-ink:                  oklch(0.28  0.05  185.5);  /* dark teal ink */
+    --zel-muted-fg:             oklch(0.58  0.038 185.5);
 }
 
 .dark {
-    --background: oklch(0.147 0.004 49.3);
-    --foreground: oklch(0.986 0.002 67.8);
-    --card: oklch(0.214 0.009 43.1);
-    --card-foreground: oklch(0.986 0.002 67.8);
-    --popover: oklch(0.214 0.009 43.1);
-    --popover-foreground: oklch(0.986 0.002 67.8);
-    --primary: oklch(0.453 0.124 130.933);
-    --primary-foreground: oklch(0.986 0.031 120.757);
-    --secondary: oklch(0.274 0.006 286.033);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.268 0.011 36.5);
-    --muted-foreground: oklch(0.714 0.014 41.2);
-    --accent: oklch(0.268 0.011 36.5);
-    --accent-foreground: oklch(0.986 0.002 67.8);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.547 0.021 43.1);
-    --chart-1: oklch(0.897 0.196 126.665);
-    --chart-2: oklch(0.768 0.233 130.85);
-    --chart-3: oklch(0.648 0.2 131.684);
-    --chart-4: oklch(0.532 0.157 131.589);
-    --chart-5: oklch(0.453 0.124 130.933);
-    --sidebar: oklch(0.214 0.009 43.1);
-    --sidebar-foreground: oklch(0.986 0.002 67.8);
-    --sidebar-primary: oklch(0.768 0.233 130.85);
-    --sidebar-primary-foreground: oklch(0.274 0.072 132.109);
-    --sidebar-accent: oklch(0.268 0.011 36.5);
-    --sidebar-accent-foreground: oklch(0.986 0.002 67.8);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.547 0.021 43.1);
+    /* ── Surfaces ─────────────────────────────────────── */
+    --background:               oklch(0.2   0.045 185.5);  /* deep teal-dark */
+    --foreground:               oklch(0.965 0.012 185.5);  /* near white */
+
+    --card:                     oklch(0.25  0.042 185.5);
+    --card-foreground:          oklch(0.965 0.012 185.5);
+
+    --popover:                  oklch(0.25  0.042 185.5);
+    --popover-foreground:       oklch(0.965 0.012 185.5);
+
+    /* ── Brand ────────────────────────────────────────── */
+    --primary:                  oklch(0.72  0.07  185.5);  /* lighter teal in dark mode */
+    --primary-foreground:       oklch(0.2   0.045 185.5);
+
+    --secondary:                oklch(0.3   0.05  185.5);
+    --secondary-foreground:     oklch(0.92  0.04  185.5);
+
+    --muted:                    oklch(0.28  0.045 185.5);
+    --muted-foreground:         oklch(0.68  0.04  185.5);
+
+    --accent:                   oklch(0.6   0.14  68);     /* amber dark as accent */
+    --accent-foreground:        oklch(0.95  0.07  85);
+
+    /* ── States ───────────────────────────────────────── */
+    --destructive:              oklch(0.68  0.18  28);     /* brighter coral in dark */
+    --destructive-foreground:   oklch(0.2   0.045 185.5);
+
+    /* ── Structure ────────────────────────────────────── */
+    --border:                   oklch(1 0 0 / 10%);
+    --input:                    oklch(1 0 0 / 14%);
+    --ring:                     oklch(0.72  0.07  185.5);
+
+    /* ── Charts ───────────────────────────────────────── */
+    --chart-1:                  oklch(0.74  0.148 72.5);
+    --chart-2:                  oklch(0.72  0.07  185.5);
+    --chart-3:                  oklch(0.62  0.18  28);
+    --chart-4:                  oklch(0.68  0.12  150);
+    --chart-5:                  oklch(0.65  0.12  295);
+
+    /* ── Sidebar ──────────────────────────────────────── */
+    --sidebar:                  oklch(0.22  0.044 185.5);
+    --sidebar-foreground:       oklch(0.965 0.012 185.5);
+    --sidebar-primary:          oklch(0.72  0.07  185.5);
+    --sidebar-primary-foreground: oklch(0.2  0.045 185.5);
+    --sidebar-accent:           oklch(0.28  0.045 185.5);
+    --sidebar-accent-foreground: oklch(0.92  0.04  185.5);
+    --sidebar-border:           oklch(1 0 0 / 10%);
+    --sidebar-ring:             oklch(0.72  0.07  185.5);
 }
 
 @theme inline {
-    --font-sans: var(--font-sans);
-    --color-sidebar-ring: var(--sidebar-ring);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-foreground: var(--sidebar-foreground);
-    --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
-    --color-ring: var(--ring);
-    --color-input: var(--input);
-    --color-border: var(--border);
-    --color-destructive: var(--destructive);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-accent: var(--accent);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
-    --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-popover: var(--popover);
-    --color-card-foreground: var(--card-foreground);
-    --color-card: var(--card);
-    --color-foreground: var(--foreground);
-    --color-background: var(--background);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
+    --font-sans:                            var(--font-sans);
+
+    /* ── colors ───────────────────────────────────────── */
+    --color-background:                     var(--background);
+    --color-foreground:                     var(--foreground);
+    --color-card:                           var(--card);
+    --color-card-foreground:                var(--card-foreground);
+    --color-popover:                        var(--popover);
+    --color-popover-foreground:             var(--popover-foreground);
+    --color-primary:                        var(--primary);
+    --color-primary-foreground:             var(--primary-foreground);
+    --color-secondary:                      var(--secondary);
+    --color-secondary-foreground:           var(--secondary-foreground);
+    --color-muted:                          var(--muted);
+    --color-muted-foreground:               var(--muted-foreground);
+    --color-accent:                         var(--accent);
+    --color-accent-foreground:              var(--accent-foreground);
+    --color-destructive:                    var(--destructive);
+    --color-destructive-foreground:         var(--destructive-foreground);
+    --color-border:                         var(--border);
+    --color-input:                          var(--input);
+    --color-ring:                           var(--ring);
+    --color-chart-1:                        var(--chart-1);
+    --color-chart-2:                        var(--chart-2);
+    --color-chart-3:                        var(--chart-3);
+    --color-chart-4:                        var(--chart-4);
+    --color-chart-5:                        var(--chart-5);
+    --color-sidebar:                        var(--sidebar);
+    --color-sidebar-foreground:             var(--sidebar-foreground);
+    --color-sidebar-primary:                var(--sidebar-primary);
+    --color-sidebar-primary-foreground:     var(--sidebar-primary-foreground);
+    --color-sidebar-accent:                 var(--sidebar-accent);
+    --color-sidebar-accent-foreground:      var(--sidebar-accent-foreground);
+    --color-sidebar-border:                 var(--sidebar-border);
+    --color-sidebar-ring:                   var(--sidebar-ring);
+
+    /* ── Zel brand colors exposed to Tailwind ─────────── */
+    --color-zel-teal:                       var(--zel-teal);
+    --color-zel-teal-light:                 var(--zel-teal-light);
+    --color-zel-teal-dark:                  var(--zel-teal-dark);
+    --color-zel-amber:                      var(--zel-amber);
+    --color-zel-amber-light:                var(--zel-amber-light);
+    --color-zel-amber-dark:                 var(--zel-amber-dark);
+    --color-zel-coral:                      var(--zel-coral);
+    --color-zel-coral-light:                var(--zel-coral-light);
+    --color-zel-sage:                       var(--zel-sage);
+    --color-zel-sage-light:                 var(--zel-sage-light);
+    --color-zel-lavender:                   var(--zel-lavender);
+    --color-zel-lavender-light:             var(--zel-lavender-light);
+    --color-zel-ink:                        var(--zel-ink);
+
+    /* ── radius scale ─────────────────────────────────── */
+    --radius-sm:    calc(var(--radius) * 0.6);   /*  ~8px  */
+    --radius-md:    calc(var(--radius) * 0.8);   /* ~11px  */
+    --radius-lg:    var(--radius);               /*  14px  */
+    --radius-xl:    calc(var(--radius) * 1.4);   /* ~20px  */
+    --radius-2xl:   calc(var(--radius) * 1.8);   /* ~25px  */
+    --radius-3xl:   calc(var(--radius) * 2.2);   /* ~31px  */
+    --radius-4xl:   calc(var(--radius) * 2.6);   /* ~36px  */
+    --radius-full:  9999px;
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
+    * {
+        @apply border-border outline-ring/50;
     }
-  body {
-    @apply bg-background text-foreground;
+    body {
+        @apply bg-background text-foreground;
     }
-  html {
-    @apply font-sans;
+    html {
+        @apply font-sans;
     }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ZEL LEARN — Global base styles
+   ═══════════════════════════════════════════════════════════ */
+@layer base {
+
+    /* Paper grain texture on body */
+    body::after {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 9999;
+    }
+
+    /* Heading styles — Zilla Slab */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-serif, 'Zilla Slab', Georgia, serif);
+        font-weight: 700;
+        line-height: 1.15;
+        /* color: var(--zel-ink); */
+        letter-spacing: -0.01em;
+    }
+
+    h1 { font-size: clamp(1.75rem, 4vw, 3rem); }
+    h2 { font-size: clamp(1.375rem, 3vw, 2rem); }
+    h3 { font-size: clamp(1.125rem, 2vw, 1.5rem); }
+    h4 { font-size: 1.125rem; }
+
+    /* Smooth font rendering */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Selection colour — teal brand */
+    ::selection {
+        background: oklch(0.558 0.095 185.5 / 20%);
+        color: var(--zel-ink);
+    }
+
+    /* Focus ring — teal, not the default */
+    :focus-visible {
+        outline: 2px solid var(--zel-teal);
+        outline-offset: 2px;
+        border-radius: var(--radius-sm);
+    }
+
+    /* Scrollbar — subtle teal tint */
+    ::-webkit-scrollbar       { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb {
+        background: oklch(0.558 0.095 185.5 / 30%);
+        border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: oklch(0.558 0.095 185.5 / 55%);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ZEL LEARN — Component utilities
+   Use these with @apply or as class names
+   ═══════════════════════════════════════════════════════════ */
+@layer utilities {
+
+    /* Reading progress gradient */
+    .progress-zel {
+        background: linear-gradient(
+            90deg,
+            var(--zel-teal),
+            var(--zel-amber)
+        );
+    }
+
+    /* Warm shadow — teal-tinted, not grey */
+    .shadow-zel-sm  { box-shadow: 0 1px 3px oklch(0.558 0.095 185.5 / 8%),  0 1px 2px oklch(0.558 0.095 185.5 / 5%); }
+    .shadow-zel-md  { box-shadow: 0 4px 12px oklch(0.558 0.095 185.5 / 12%), 0 2px 6px oklch(0.558 0.095 185.5 / 7%); }
+    .shadow-zel-lg  { box-shadow: 0 8px 28px oklch(0.558 0.095 185.5 / 14%), 0 4px 10px oklch(0.558 0.095 185.5 / 8%); }
+    .shadow-zel-card {
+        box-shadow:
+            0 2px 8px oklch(0.558 0.095 185.5 / 10%),
+            0 0 0 1.5px var(--border);
+    }
+
+    /* Amber glow — for primary CTA buttons */
+    .shadow-amber {
+        box-shadow: 0 4px 16px oklch(0.74 0.148 72.5 / 35%);
+    }
+
+    /* Teal accent left-border on cards */
+    .border-l-zel { border-left: 3px solid var(--zel-teal); }
+    .border-l-amber { border-left: 3px solid var(--zel-amber); }
+
+    /* Note card accent bar colours */
+    .accent-teal      { background-color: var(--zel-teal); }
+    .accent-amber     { background-color: var(--zel-amber); }
+    .accent-coral     { background-color: var(--zel-coral); }
+    .accent-sage      { background-color: var(--zel-sage); }
+    .accent-lavender  { background-color: var(--zel-lavender); }
+
+    /* Teal-tinted gradient background — for hero sections */
+    .bg-zel-gradient {
+        background: linear-gradient(
+            135deg,
+            oklch(0.977 0.008 185.5) 0%,
+            oklch(0.92  0.04  185.5) 100%
+        );
+    }
+
+    /* Dark ink hero — for onboarding / profile header */
+    .bg-zel-ink {
+        background: oklch(0.28 0.05 185.5);
+    }
+
+    /* Amber highlight box — for callouts in reader */
+    .callout-amber {
+        background: var(--zel-amber-light);
+        border-left: 3px solid var(--zel-amber);
+        border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    /* Subject badge colour sets */
+    .badge-commerce  { @apply bg-[--zel-amber-light]   text-[--zel-amber-dark]  border-[--zel-amber]/30; }
+    .badge-sciences  { @apply bg-[--zel-sage-light]    text-[--zel-sage]        border-[--zel-sage]/30; }
+    .badge-law       { @apply bg-[--zel-lavender-light] text-[--zel-lavender]   border-[--zel-lavender]/30; }
+    .badge-eng       { @apply bg-[--zel-teal-light]    text-[--zel-teal-dark]   border-[--zel-teal]/30; }
+    .badge-default   { @apply bg-secondary             text-secondary-foreground border-border; }
 }
