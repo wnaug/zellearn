@@ -1,10 +1,10 @@
 // ui/fonts.ts
 
-import {Figtree, Mozilla_Headline, Mozilla_Text, JetBrains_Mono, Fraunces} from "next/font/google"
+import {Figtree, Mozilla_Headline, Mozilla_Text, Henny_Penny, JetBrains_Mono, Fraunces} from "next/font/google"
 
 
 // *** Primary Fonts ***
-
+ 
 // Primary Heading Font
  export const fontSerif = Fraunces({
   variable: "--font-serif",
@@ -28,6 +28,15 @@ import {Figtree, Mozilla_Headline, Mozilla_Text, JetBrains_Mono, Fraunces} from 
   subsets: ["latin"],
   fallback: [ "SF Mono", "SF Mono-Regular", "SF Mono Mac", "SF Mono Mac Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", "monospace"]
 })
+
+// Logo Font
+
+export const fontLogo = Henny_Penny({
+    weight:"400",
+    subsets: ["latin"],
+    display: "swap",
+    variable: "--font-logo",
+  })
 
 
 

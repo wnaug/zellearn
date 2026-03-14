@@ -1,6 +1,6 @@
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { fontSans, fontSerif, fontMono } from "@/components/ui/fonts"
+import { fontSans, fontSerif, fontMono, fontLogo } from "@/components/ui/fonts"
 import { TooltipProvider } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils"
 
@@ -18,7 +18,8 @@ export default function RootLayout({
         fontSans.variable,
         "font-sans",
         fontMono.variable,
-        fontSerif.variable
+        fontSerif.variable,
+        fontLogo.variable
       )}
     >
       <body>
